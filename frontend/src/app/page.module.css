@@ -1,0 +1,161 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    background-color: var(--bg-primary);
+}
+
+.card {
+    background: var(--bg-secondary);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.dot {
+    color: var(--accent-emerald);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.createSection {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.langSelectWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.langLabel {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.langSelect {
+    background-color: var(--bg-input);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.langSelect:focus {
+    border-color: var(--accent-color);
+}
+
+.primaryButton {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #121212;
+    /* Black text for yellow button */
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.primaryButton:hover {
+    background-color: #eab308;
+    /* Slightly darker yellow */
+    transform: translateY(-2px);
+}
+
+.primaryButton:active {
+    transform: scale(0.98);
+}
+
+.hintText {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.dividerLine {
+    flex: 1;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.dividerText {
+    padding: 0 1rem;
+}
+
+.joinSection {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.inputField {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.inputField:focus {
+    border-color: var(--accent-color);
+}
+
+.secondaryButton {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.secondaryButton:hover {
+    background-color: rgba(250, 204, 21, 0.1);
+    transform: translateY(-2px);
+}
+
+.secondaryButton:active {
+    transform: scale(0.98);
+}
