@@ -1,0 +1,10 @@
+# Genel
+node_modules/
+.env
+.DS_Store
+
+# Frontend (Vercel & Next.js)
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel/
