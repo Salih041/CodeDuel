@@ -37,6 +37,7 @@ export default function RoomPage({ params }) {
     const [countdownValue, setCountdownValue] = useState(null);
     const [floatingReactions, setFloatingReactions] = useState([]);
     const [bouncingEmoji, setBouncingEmoji] = useState(null);
+    const [myFloatingReactions, setMyFloatingReactions] = useState([]);
 
     const handleSubmitRef = useRef();
 
@@ -210,6 +211,12 @@ export default function RoomPage({ params }) {
             socketRef.current.emit('send-reaction', { roomId, emoji });
             setBouncingEmoji(emoji);
             setTimeout(() => setBouncingEmoji(null), 300);
+
+            const id = Date.now() + Math.random();
+            setMyFloatingReactions(prev => [...prev, { id, emoji }]);
+            setTimeout(() => {
+                setMyFloatingReactions(prev => prev.filter(r => r.id !== id));
+            }, 2000);
         }
     }
 
@@ -306,6 +313,11 @@ export default function RoomPage({ params }) {
                                 onChange={handleEditorChange}
                                 onSubmit={() => handleSubmitRef.current?.()}
                             />
+                            {myFloatingReactions.map(reaction => (
+                                <div key={reaction.id} className={styles.floatingReaction}>
+                                    {reaction.emoji}
+                                </div>
+                            ))}
                         </div>
                         <div className={styles.reactionsBar}>
                             {['🔥', '💀', '🚀', '😭', '👀'].map(emoji => (

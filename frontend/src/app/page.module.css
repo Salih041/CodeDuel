@@ -1,7 +1,9 @@
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 30px;
     min-height: calc(100vh - 80px);
     background-color: var(--bg-primary);
 }
@@ -9,7 +11,7 @@
 .card {
     background: var(--bg-secondary);
     backdrop-filter: blur(10px);
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 1rem;
     border: 1px solid var(--border-color);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
@@ -158,4 +160,22 @@
 
 .secondaryButton:active {
     transform: scale(0.98);
+}
+
+.selamyLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 1;
+}
+
+.selamyLink:hover {
+    transform: translateY(-3px) scale(1.1);
+    filter: drop-shadow(0 6px 12px rgba(255, 209, 91, 0.4));
+}
+
+.selamyLink:active {
+    transform: scale(0.95);
+    filter: drop-shadow(0 2px 4px rgba(255, 209, 91, 0.2));
 }

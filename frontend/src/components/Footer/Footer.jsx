@@ -4,13 +4,13 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
-    const version = "v1.0.1";
+    const version = "v1.0.0";
     return (
         <footer className={styles.footer}>
             <div className={styles.footerContent}>
 
                 <div className={styles.footerLeft}>
-                    <p>&copy; {currentYear} SelamY</p>
+                    <p>&copy; {currentYear} CodeDuel</p>
                     <span className={styles.footerVersion}>{version}</span>
                 </div>
 

@@ -23,6 +23,14 @@
     color: var(--accent-color);
     text-decoration: none;
     transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.logoIcon {
+    height: 64px;
+    width: auto;
+    margin-right: 12px;
 }
 
 .logo:hover {
